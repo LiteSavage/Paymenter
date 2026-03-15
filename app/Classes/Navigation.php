@@ -26,10 +26,17 @@ class Navigation
                 ],
                 [
                     'name' => __('Minecraft'),
+                    'is_mega_menu' => true,
                     'children' => $categories->map(function ($category) {
                         return [
                             'name' => $category->name,
                             'url' => route('category.show', ['category' => $category->slug]),
+                            'image' => match($category->name) {
+                                'Java Edition' => 'https://i.imgur.com/7FEWYMt.jpeg',
+                                'Bedrock Edition' => 'https://i.imgur.com/YourBedrockImageID.png',
+                                // The fallback just in case you create a new category later and use the admin upload
+                                default => $category->image ? \Illuminate\Support\Facades\Storage::url($category->image) : null,
+                            },
                         ];
                     })->toArray(),
                     'condition' => count($categories) > 0,
