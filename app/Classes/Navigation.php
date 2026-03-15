@@ -25,7 +25,7 @@ class Navigation
                     'icon' => 'ri-home-2',
                 ],
                 [
-                    'name' => __('navigation.shop'),
+                    'name' => __('Minecraft'),
                     'children' => $categories->map(function ($category) {
                         return [
                             'name' => $category->name,
@@ -35,6 +35,41 @@ class Navigation
                     'condition' => count($categories) > 0,
                     'separator' => true,
                     'icon' => 'ri-shopping-bag',
+                ],
+               [
+                    'name' => __('Features'),
+                    'url' => route('features'),
+                    'icon' => 'ri-home-2',
+                ],
+               [
+                    'name' => __('News'),
+                    'url' => route('news'),
+                    'icon' => 'ri-home-2',
+                ],
+               [
+                    'name' => __('Help Center'),
+                    'children' => [
+                        [
+                            'name' => __('Guide'),
+                            'route' => 'help',
+                            'url' => route('help'),
+                        ],
+                        [
+                            'name' => __('FAQ'),
+                            'route' => 'faq',
+                            'url' => route('faq'),
+                        ],
+                        [
+                            'name' => __('Support'),
+                            'route' => 'support',
+                            'url' => route('support'),
+                        ],
+                        [
+                            'name' => __('Node Status'),
+                            'route' => 'status',
+                            'url' => route('status'),
+                        ],
+                    ],
                 ],
             ];
 

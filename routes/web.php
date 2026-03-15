@@ -83,3 +83,11 @@ Route::group([
         'middleware' => 'web',
     ]);
 });
+
+
+Route::view('/features', 'features')->name('features');
+Route::view('/news', 'news')->name('news');
+Route::view('/helpcenter', 'help')->name('help');
+Route::view('/faq', 'faq')->name('faq');
+Route::view('/support', 'support')->name('support');
+Route::view('/status', 'status')->name('status');

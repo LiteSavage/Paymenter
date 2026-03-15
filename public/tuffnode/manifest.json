@@ -1,0 +1,35 @@
+{
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-Bwd3K2H4.css",
+    "src": "resources/css/filament/admin/theme.css",
+    "isEntry": true,
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ]
+  },
+  "themes/tuffnode/css/app.css": {
+    "file": "assets/app-DrtH1WBc.css",
+    "src": "themes/tuffnode/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "themes/tuffnode/js/app.js": {
+    "file": "assets/app-C2CoIQtW.js",
+    "name": "app",
+    "src": "themes/tuffnode/js/app.js",
+    "isEntry": true
+  },
+  "themes/tuffnode/js/easymde-entry.js": {
+    "file": "assets/easymde-entry-C2VIq2XC.js",
+    "name": "easymde-entry",
+    "src": "themes/tuffnode/js/easymde-entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/easymde-entry-DaCrUmpA.css"
+    ]
+  }
+}
